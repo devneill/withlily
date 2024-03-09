@@ -6,9 +6,9 @@ import Link from "@components/ui/link.astro";
 const { plan } = Astro.props;
 
 const colors = {
-  cyan: "text-cyan-600",
-  pink: "text-pink-700",
-  emerald: "text-emerald-600",
+  pink: "text-pink-600",
+  amber: "text-amber-700",
+  indigo: "text-indigo-600",
 };
 ---
 
@@ -17,12 +17,12 @@ const colors = {
     class:list={[
       "flex flex-col w-full order-first lg:order-none border py-5 px-6 relative rounded-lg",
       plan.popular
-        ? "  border-pink-500 shadow-lg shadow-pink-50"
+        ? "  border-amber-500 shadow-lg shadow-amber-50"
         : " border-neutral-200 shadow-sm",
     ]}>
     {
       plan.popular && (
-        <span class="inline-flex absolute px-3 py-1 text-xs -top-3 left-1/2 -translate-x-1/2 font-medium rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white ">
+        <span class="inline-flex absolute px-3 py-1 text-xs -top-3 left-1/2 -translate-x-1/2 font-medium rounded-full bg-gradient-to-r from-red-500 to-amber-500 text-white ">
           Popular
         </span>
       )
